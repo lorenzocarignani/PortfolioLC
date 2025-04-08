@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#E1E67F",
+        primary: "#4FC153",
         mute: "#A1A1AA",
-        gray: "#27272A",
+        gris: "#27272A",
         white: "#FAFAFA",
         negro: "#09090B",
       },
@@ -14,7 +14,7 @@ export default {
         jaro: ["Jaro", "sans-serif"],
       },
       dropShadow: {
-        red: "2px 4px 4px #E1E67F", // o el rojo que usás en primary
+        red: "2px 4px 4px #4FC153", // o el rojo que usás en primary
       },
     },
   },
