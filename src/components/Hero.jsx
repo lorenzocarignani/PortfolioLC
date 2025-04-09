@@ -13,7 +13,7 @@ const techLogos = [
     key: "dotnet",
   },
   {
-    icon: <DiReact className="text-[#61DAFB] text-5xl" title="React" />,
+    icon: <DiReact className="text-[#00D8FF] text-5xl" title="React" />,
     key: "react",
   },
   {
@@ -28,18 +28,42 @@ const techLogos = [
 
 const Hero = () => {
   return (
-    <section className="w-full min-h-screen pt-32 sm:pt-28 md:pt-0 bg-negro text-white flex flex-col items-center justify-center px-6 md:px-20 py-16 gap-10">
+    <section className="w-full min-h-screen mt-32 sm:pt-28 md:pt-0 bg-negro text-white flex flex-col items-center justify-center px-6 md:px-20 py-16 gap-10">
       {/* Título + animación */}
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full gap-10">
         <div className="flex flex-col items-start gap-6 max-w-xl text-center md:text-left">
           <motion.h1
-            className="text-5xl md:text-6xl leading-tight"
+            className="text-5xl text-center md:text-6xl leading-tight"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             ¡Bienvenido a mi portafolio!
           </motion.h1>
+          <motion.p
+            className="text-lg md:text-xl text-gray-300 pl-4 border-l-4 border-primary italic"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            <span className="text-white font-semibold">
+              Soy desarrollador Full Stack
+            </span>{" "}
+            con experiencia en{" "}
+            <span className="text-primary font-semibold">.NET</span>,{" "}
+            <span className="text-primary font-semibold">React</span>,{" "}
+            <span className="text-primary font-semibold">SQL Server</span> y{" "}
+            <span className="text-primary font-semibold">Azure</span>.{" "}
+            <br className="hidden md:block" />
+            Me especializo en construir{" "}
+            <span className="text-white font-medium">
+              aplicaciones escalables, modernas y orientadas a resultados
+            </span>
+            .
+            <br className="hidden md:block" />
+            Explorá mis proyectos y descubrí cómo puedo ayudarte a impulsar tu
+            próximo desafío tecnológico.
+          </motion.p>
         </div>
 
         <motion.div
@@ -54,7 +78,7 @@ const Hero = () => {
 
       {/* Carrusel de tecnologías con efecto fade */}
       <motion.div
-        className="bg-gris relative rounded-[5px] p-6 w-full md:w-3/4 lg:w-2/3 flex flex-col items-center gap-6 overflow-hidden"
+        className="bg-gris relative rounded-[5px] p-6 w-full md:w-3/4 lg:w-3/4 flex flex-col items-center gap-6 overflow-hidden"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
