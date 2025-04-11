@@ -10,7 +10,7 @@ const Dropdown = ({ setIsOpen, isOpen }) => {
         onClick={toggleDropdown}
         aria-label="Menú de navegación"
         role="button"
-        className="w-12 h-12 md:w-14 md:h-14 rounded-md hover:drop-shadow-red flex items-center justify-center overflow-hidden relative border-[3px] border-primary"
+        className="w-14 h-14 md:w-14 md:h-14 rounded-md hover:drop-shadow-red flex items-center justify-center overflow-hidden relative border-[3px] border-primary"
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -27,9 +27,9 @@ const Dropdown = ({ setIsOpen, isOpen }) => {
             className="absolute"
           >
             {isOpen ? (
-              <ChevronUp className="text-primary w-full h-full p-2" />
+              <ChevronUp className="text-primary w-full h-full p-2 hover:drop-shadow-red" />
             ) : (
-              <ChevronDown className="text-primary w-full h-full p-2" />
+              <ChevronDown className="text-primary w-full h-full p-2 hover:drop-shadow-red " />
             )}
           </motion.div>
         </AnimatePresence>

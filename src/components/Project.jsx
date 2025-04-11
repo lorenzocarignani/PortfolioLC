@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import ProjectFilter from "./ProjectFilter";
 import ProjectCards from "./ProjectCards";
 
-const categories = ["Fullstack", "Frontend", "Backend", "Data"];
+const categories = ["Todo", "Frontend", "Backend"];
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Fullstack");
+  const [selectedCategory, setSelectedCategory] = useState("Todo");
 
   return (
     <section className="bg-negro text-white min-h-screen px-4 sm:px-6 lg:px-24 py-12">

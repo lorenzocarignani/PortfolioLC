@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ButtonCv from "./ButtonCv";
 
 const HeroContent = () => {
   return (
@@ -13,19 +14,29 @@ const HeroContent = () => {
         >
           ¡Bienvenido a mi portafolio!
         </motion.h1>
-
-        <motion.p
-          className="text-lg md:text-xl text-gray-300 pb-1 border-b-4 border-primary italic"
+        <motion.div
+          className="relative inline-block text-lg md:text-xl text-gray-300 italic text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          <span className="text-white font-semibold">
-            Desarrollador Full Stack
-          </span>{" "}
-          en <span className="text-primary font-semibold">.NET</span> y{" "}
-          <span className="text-primary font-semibold">React</span>
-        </motion.p>
+          <p>
+            <span className="text-white font-semibold">
+              Desarrollador Full Stack
+            </span>{" "}
+            en <span className="text-primary font-semibold">.NET</span> y{" "}
+            <span className="text-primary font-semibold">React</span>
+          </p>
+
+          {/* Línea animada */}
+          <motion.div
+            className="absolute left-0 -bottom-1 h-[3px] bg-primary rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 1.2, delay: 1 }} // comienza después del texto
+          />
+        </motion.div>
+        <ButtonCv />
       </div>
     </div>
   );
