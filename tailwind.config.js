@@ -11,10 +11,10 @@ export default {
         negro: "#09090B",
       },
       fontFamily: {
-        jaro: ["Jaro", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
       },
       dropShadow: {
-        red: "2px 4px 4px #4FC153", // o el rojo que usás en primary
+        red: "2px 4px 4px #4FC153",
       },
     },
   },

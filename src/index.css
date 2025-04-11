@@ -3,8 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply font-jaro;
-}
-body {
-  @apply bg-negro text-white;
+  @apply font-oswald bg-negro text-white;
 }
