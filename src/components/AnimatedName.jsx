@@ -26,7 +26,7 @@ const AnimatedName = ({ name }) => {
 
   return (
     <span
-      className="text-2xl font-jaro flex items-center whitespace-nowrap"
+      className="text-xl flex items-center whitespace-nowrap"
       aria-label={name}
     >
       {name.split("").map((char, index) => (

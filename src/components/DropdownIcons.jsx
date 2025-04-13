@@ -1,15 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, GalleryVerticalEnd, Download } from "lucide-react";
+
 import AnimatedName from "./AnimatedName";
 
-const menuItems = [
-  { icon: <User />, text: "Sobre mí", link: "/about" },
-  { icon: <GalleryVerticalEnd />, text: "Proyectos", link: "/projects" },
-  { icon: <Download />, text: "Descargar Cv", link: "/contact" },
-];
-const DropdownIcons = ({ isOpen }) => {
+const DropdownIcons = ({ isOpen, menuItems }) => {
   return (
     <div>
       <AnimatePresence>

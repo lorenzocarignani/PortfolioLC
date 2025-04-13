@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 import AnimatedName from "./AnimatedName";
-import Foto from "../assets/Foto.webp";
-
+import Foto from "../assets/Pictures/Foto.webp";
 import Dropdown from "./Dropdown";
 import DropdownIcons from "./DropdownIcons";
+
+import { User, GalleryVerticalEnd, Download, Home } from "lucide-react";
+
+const menuItems = [
+  { icon: <Home />, text: "Inicio", link: "/" },
+  { icon: <User />, text: "Sobre mí", link: "/about" },
+  { icon: <GalleryVerticalEnd />, text: "Proyectos", link: "/projects" },
+  { icon: <Download />, text: "Descargar Cv", link: "/contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +37,7 @@ const Navbar = () => {
         }`}
     >
       <div className="w-full px-4 md:px-6 text-white flex items-center justify-between">
+        {/* Foto + Nombre */}
         <div className="flex items-center gap-3">
           <div className="w-16 h-16 md:w-20 md:h-20 border-[3px] border-primary rounded-full overflow-hidden">
             <img
@@ -41,11 +50,25 @@ const Navbar = () => {
           <AnimatedName name="Lorenzo Carignani" />
         </div>
 
-        {/* Dropdown */}
-        <div className="relative">
+        {/* Menú horizontal desde 901px en adelante */}
+        <div className="hidden [@media(min-width:901px)]:flex items-center gap-6">
+          {menuItems.map((item, index) => (
+            <div key={index}>
+              <Link
+                to={item.link}
+                className="flex items-center gap-2 text-white hover:drop-shadow-red transition"
+              >
+                <span>{item.icon}</span>
+                <AnimatedName name={item.text} />
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* Dropdown hasta 900px */}
+        <div className="relative [@media(min-width:901px)]:hidden">
           <Dropdown setIsOpen={setIsOpen} isOpen={isOpen} />
-          {/* Menú desplegable */}
-          <DropdownIcons isOpen={isOpen} />
+          <DropdownIcons isOpen={isOpen} menuItems={menuItems} />
         </div>
       </div>
     </nav>
