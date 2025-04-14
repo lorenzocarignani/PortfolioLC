@@ -3,10 +3,12 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import NotFound from "./routes/NotFound";
 import AboutMe from "./pages/AboutMe";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
