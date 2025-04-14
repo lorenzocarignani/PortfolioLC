@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        "border-charger": "border-charger 1.5s infinite",
+      },
       colors: {
         primary: "#4FC153",
         mute: "#A1A1AA",

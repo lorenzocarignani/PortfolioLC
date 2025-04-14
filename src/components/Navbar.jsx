@@ -54,13 +54,24 @@ const Navbar = () => {
         <div className="hidden [@media(min-width:901px)]:flex items-center gap-6">
           {menuItems.map((item, index) => (
             <div key={index}>
-              <Link
-                to={item.link}
-                className="flex items-center gap-2 text-white hover:drop-shadow-red transition"
-              >
-                <span>{item.icon}</span>
-                <AnimatedName name={item.text} />
-              </Link>
+              {item.text === "Descargar Cv" ? (
+                <a
+                  href="/Lorenzo-Carignani-CV.pdf"
+                  download="Lorenzo-Carignani-CV.pdf"
+                  className="flex items-center gap-2 text-white hover:drop-shadow-red transition"
+                >
+                  <span>{item.icon}</span>
+                  <AnimatedName name={item.text} />
+                </a>
+              ) : (
+                <Link
+                  to={item.link}
+                  className="flex items-center gap-2 text-white hover:drop-shadow-red transition"
+                >
+                  <span>{item.icon}</span>
+                  <AnimatedName name={item.text} />
+                </Link>
+              )}
             </div>
           ))}
         </div>
@@ -68,7 +79,11 @@ const Navbar = () => {
         {/* Dropdown hasta 900px */}
         <div className="relative [@media(min-width:901px)]:hidden">
           <Dropdown setIsOpen={setIsOpen} isOpen={isOpen} />
-          <DropdownIcons isOpen={isOpen} menuItems={menuItems} />
+          <DropdownIcons
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            menuItems={menuItems}
+          />
         </div>
       </div>
     </nav>

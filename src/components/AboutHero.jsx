@@ -17,16 +17,25 @@ const AboutHero = () => {
           <img
             src={Logo}
             alt="Lorenzo Carignani"
-            className="w-72 h-72 md:w-96 md:h-96 object-scale-down border-primary drop-shadow-red "
+            className="w-72 h-72 md:w-96 md:h-96 object-scale-down border-primary drop-shadow-red"
             loading="lazy"
           />
         </div>
 
         {/* Texto a la izquierda */}
         <div className="flex-1 flex flex-col gap-6">
-          <h1 className="text-4xl md:text-5xl font-semibold text-primary text-center md:text-left">
-            Sobre mí
-          </h1>
+          {/* Título + animación */}
+          <div className="text-center md:text-left">
+            <h1 className="text-6xl md:text-5xl font-semibold text-white">
+              Sobre mí
+            </h1>
+            <motion.div
+              className="h-[3px] bg-primary rounded-full mt-2 mx-auto md:mx-0"
+              initial={{ width: 0 }}
+              animate={{ width: "33%" }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+            />
+          </div>
 
           <p className="text-lg leading-relaxed text-gray-200">
             ¡Hola! Soy <strong className="text-white">Lorenzo Carignani</strong>
@@ -41,7 +50,7 @@ const AboutHero = () => {
 
           <p className="text-lg leading-relaxed text-gray-200">
             Me formé como desarrollador en{" "}
-            <strong className="text-white">Coderhouse</strong> y complementé mi
+            <strong className="text-white">UTN</strong> y complementé mi
             formación con cursos avanzados de{" "}
             <strong className="text-white">
               arquitectura de software, patrones de diseño

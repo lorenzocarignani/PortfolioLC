@@ -5,8 +5,8 @@ import { Download } from "lucide-react";
 const ButtonCv = () => {
   return (
     <motion.a
-      href=""
-      download=""
+      href="/public/Lorenzo-Carignani-CV.pdf"
+      download="CV-Lorenzo-Carignani.pdf"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="bg-negro text-white px-6 py-3 w-full  rounded-[8px] font-semibold text-lg flex items-center justify-center gap-2 shadow-md border border-primary transition-colors duration-300 hover:drop-shadow-red text-center break-keep"

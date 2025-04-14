@@ -5,7 +5,7 @@ const projects = [
   {
     id: 1,
     title: "TaskMinder",
-    category: ["Backend", "Frontend"],
+    category: ["Fullstack"],
     description:
       "Sistema completo con ABM de tareas, proyectos y usuarios. Incluye autenticación y autorización. Bases de datos SQL Server.",
     src: "/src/assets/Pictures/TaskMinderLogin.webp",
@@ -49,11 +49,27 @@ const ProjectCards = ({ selectedCategory }) => {
 
   return (
     <div className="w-full flex justify-center mt-20">
-      <div className="flex flex-col gap-8 w-11/12 max-w-6xl">
+      <motion.div
+        className="flex flex-col gap-8 w-11/12 max-w-6xl"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.2,
+            },
+          },
+        }}
+      >
         {filteredProjects.map((project) => (
-          <div
+          <motion.div
             key={project.id}
             className="flex flex-col lg:flex-row bg-gris p-6 rounded-[10px] shadow-lg hover:scale-[1.01] hover:drop-shadow-red transition-transform duration-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
           >
             {/* Texto */}
             <div className="flex-1 pr-0 lg:pr-6 mb-4 lg:mb-0">
@@ -81,9 +97,9 @@ const ProjectCards = ({ selectedCategory }) => {
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
               />
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
