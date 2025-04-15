@@ -10,6 +10,7 @@ import {
   DiDocker,
 } from "react-icons/di";
 import { VscAzure } from "react-icons/vsc";
+import useTranslation from "../custom/useTraslation/UseTraslation";
 
 const techLogos = [
   {
@@ -55,6 +56,7 @@ const techLogos = [
 ];
 
 const HeroTechCarousel = () => {
+  const t = useTranslation();
   return (
     <div className="justify-center w-full flex items-center">
       <motion.div
@@ -63,7 +65,7 @@ const HeroTechCarousel = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        <h2 className="text-3xl text-white mb-4">Tecnologías principales</h2>
+        <h2 className="text-3xl text-white mb-4">{t("tech.title")}</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full justify-items-center">
           {techLogos.map((logo) => (

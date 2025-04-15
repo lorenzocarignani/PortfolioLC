@@ -4,6 +4,7 @@ import Projects from "./pages/Projects";
 import NotFound from "./routes/NotFound";
 import AboutMe from "./pages/AboutMe";
 import ScrollToTop from "./components/ScrollToTop";
+import React from "react";
 
 function App() {
   return (

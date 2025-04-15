@@ -8,6 +8,7 @@ const Footer = () => {
       <div className="w-full max-w-screen-xl mx-auto flex flex-col items-center">
         <img
           src={Logo}
+          alt="Logo LC"
           className="w-8 h-8 p-1 border-2 rounded-full border-primary mb-3"
         />
         <hr className="border-mute border-1 w-1/2 mb-10" />

@@ -2,8 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import SocialIcons from "./SocialIcons";
+import useTranslation from "../custom/useTraslation/UseTraslation";
 
 const HeroContent = () => {
+  const t = useTranslation();
+
   return (
     <div className="flex flex-col items-center gap-6 max-w-xl text-center md:text-center">
       <motion.h1
@@ -12,7 +15,7 @@ const HeroContent = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        ¡Bienvenido a mi portafolio!
+        {t("hero.title")}
       </motion.h1>
       <motion.div
         className="relative inline-block text-lg md:text-xl text-gray-300 italic text-center"
@@ -21,10 +24,10 @@ const HeroContent = () => {
         transition={{ duration: 1, delay: 0.4 }}
       >
         <p>
-          <span className="text-white font-semibold">
-            Desarrollador Full Stack
-          </span>{" "}
-          en <span className="text-primary font-semibold">.NET</span> y{" "}
+          <span className="text-white font-semibold">{t("hero.subtitle")}</span>{" "}
+          {t("hero.in")}{" "}
+          <span className="text-primary font-semibold">.NET</span>{" "}
+          {t("hero.and")}{" "}
           <span className="text-primary font-semibold">React</span>
         </p>
 

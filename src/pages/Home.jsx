@@ -13,7 +13,7 @@ const Home = () => {
     // Simulamos carga
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1200); // 2 segundos
+    }, 200); // 2 segundos
 
     return () => clearTimeout(timer);
   }, []);

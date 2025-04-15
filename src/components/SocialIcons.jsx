@@ -1,5 +1,6 @@
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
+import useTranslation from "../custom/useTraslation/UseTraslation";
 
 const socialLinks = [
   {
@@ -20,9 +21,10 @@ const socialLinks = [
 ];
 
 const SocialIcons = () => {
+  const t = useTranslation();
   return (
     <div className="flex items-center gap-4 ">
-      <label>Redes sociales: </label>
+      <label>{t("social.title")}</label>
       {socialLinks.map((link, index) => (
         <a
           key={index}

@@ -1,45 +1,52 @@
 import React from "react";
 import { motion } from "framer-motion";
+import useTranslation from "../custom/useTraslation/UseTraslation";
 
-const projects = [
-  {
-    id: 1,
-    title: "TaskMinder",
-    category: ["Fullstack"],
-    description:
-      "Sistema completo con ABM de tareas, proyectos y usuarios. Incluye autenticación y autorización. Bases de datos SQL Server.",
-    src: "/src/assets/Pictures/TaskMinderLogin.webp",
-    link: "https://github.com/FrancoExeqGarcia/TP-PPS",
-  },
-  {
-    id: 2,
-    title: "Food Store",
-    category: "Frontend",
-    description:
-      "Sitio con React, Tailwind y Swal2 para una prueba técnica de frontend.",
-    src: "/src/assets/Pictures/Home-FoodStore.webp",
-    link: "https://github.com/lorenzocarignani/FoodStore",
-  },
+import TaskMinder from "../assets/Pictures/TaskMinder.webp";
 
-  {
-    id: 3,
-    title: "Cafeteria Web API",
-    category: "Backend",
-    description: "API construida con .NET y autenticación con JWT.",
-    src: "https://i.pinimg.com/736x/3f/7d/b3/3f7db31690bbba1f7ed9076c3223a735.jpg",
-    link: "https://github.com/lorenzocarignani/CafeteriaWebApi",
-  },
-  {
-    id: 4,
-    title: "Estudio Carignani",
-    category: "Frontend",
-    description: "Landing page para estudio de abogacia con React y Tailwind.",
-    src: "/src/assets/Pictures/EstudioCarignani.webp",
-    link: "https://carignaniabogados.netlify.app/",
-  },
-];
+import FoodStore from "../assets/Pictures/Home-FoodStore.webp";
+
+import Estudio from "../assets/Pictures/EstudioCarignani.webp";
 
 const ProjectCards = ({ selectedCategory }) => {
+  const t = useTranslation();
+
+  const projects = [
+    {
+      id: 1,
+      title: "TaskMinder",
+      category: ["Fullstack"],
+      description: t("project.taskminder"),
+      src: TaskMinder,
+      link: "https://github.com/FrancoExeqGarcia/TP-PPS",
+    },
+    {
+      id: 2,
+      title: "Food Store",
+      category: "Frontend",
+      description: t("project.foodstore"),
+      src: FoodStore,
+      link: "https://github.com/lorenzocarignani/FoodStore",
+    },
+
+    {
+      id: 3,
+      title: "Cafeteria Web API",
+      category: "Backend",
+      description: t("project.cafeteria"),
+      src: "https://i.pinimg.com/736x/3f/7d/b3/3f7db31690bbba1f7ed9076c3223a735.jpg",
+      link: "https://github.com/lorenzocarignani/CafeteriaWebApi",
+    },
+    {
+      id: 4,
+      title: "Estudio Carignani",
+      category: "Frontend",
+      description: t("project.estudio"),
+      src: Estudio,
+      link: "https://carignaniabogados.netlify.app/",
+    },
+  ];
+
   const filteredProjects =
     selectedCategory === "Todo"
       ? projects
@@ -81,7 +88,7 @@ const ProjectCards = ({ selectedCategory }) => {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
-                Ver proyecto →
+                {t("project.view")}
               </a>
             </div>
 

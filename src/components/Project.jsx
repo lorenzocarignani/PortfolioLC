@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import ProjectFilter from "./ProjectFilter";
 import ProjectCards from "./ProjectCards";
 import { motion } from "framer-motion";
+import useTranslation from "../custom/useTraslation/UseTraslation";
 
 const categories = ["Todo", "Frontend", "Backend", "Fullstack"];
 
 const Projects = () => {
+  const t = useTranslation();
+
   const [selectedCategory, setSelectedCategory] = useState("Todo");
 
   return (
@@ -21,7 +24,7 @@ const Projects = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Proyectos
+        {t("project.title")}
       </motion.h2>
 
       <motion.div

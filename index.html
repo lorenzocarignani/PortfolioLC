@@ -3,10 +3,27 @@
   <head>
     <meta charset="UTF-8" />
 
-    <!-- Rendimiento: conexión previa a Google Fonts -->
+    <!-- Mejora de rendimiento: conexión previa a Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- FAVICONS y MANIFEST -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/icons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/icons/site.webmanifest" />
+
+    <!-- Preload + carga diferida de fuentes -->
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
@@ -20,35 +37,32 @@
       />
     </noscript>
 
-    <!-- SEO y título rápido -->
+    <!-- SEO -->
     <title>Lorenzo Carignani | Full Stack Developer</title>
     <meta
       name="description"
       content="Portafolio de Lorenzo Carignani, desarrollador Full Stack con experiencia en .NET, React, SQL Server y Azure."
     />
 
-    <!-- Fuentes: swap para que se vea texto sin demorar -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Icono -->
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-
-    <!-- Mobile scaling -->
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Performance: color de fondo predeterminado para carga -->
-    <meta name="theme-color" content="#0f0f0f" />
+    <!-- Mobile PWA meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- Opcional: si tu foto está en public -->
-    <!-- <link rel="preload" href="/foto.webp" as="image" /> -->
+    <!-- Color inicial para el navegador -->
+    <meta name="theme-color" content="#0f0f0f" />
   </head>
+
   <body style="background-color: #0f0f0f; color: white">
     <div id="root"></div>
 
-    <!-- Entrada de la app -->
+    <!-- Entrada de tu aplicación Vite -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 import AnimatedName from "./AnimatedName";
 
@@ -54,6 +55,9 @@ const DropdownIcons = ({ isOpen, menuItems, setIsOpen }) => {
                 )}
               </motion.div>
             ))}
+            <div className="pt-4 border-t border-mute">
+              <LanguageSwitcher />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

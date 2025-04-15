@@ -15,7 +15,9 @@ const ProjectFilter = ({ selected, onSelect, categories }) => {
             key={category}
             onClick={() => onSelect(category)}
             className={`px-4 sm:px-5 md:px-6 py-2 rounded-[5px] bg-black  transition duration-200 text-lg sm:text-xl md:text-2xl ${
-              selected === category ? "text-white " : "text-mute"
+              selected === category
+                ? "text-white drop-shadow-red "
+                : "text-mute"
             }`}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

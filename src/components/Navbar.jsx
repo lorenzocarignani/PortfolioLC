@@ -4,19 +4,26 @@ import AnimatedName from "./AnimatedName";
 import Foto from "../assets/Pictures/Foto.webp";
 import Dropdown from "./Dropdown";
 import DropdownIcons from "./DropdownIcons";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 import { User, GalleryVerticalEnd, Download, Home } from "lucide-react";
-
-const menuItems = [
-  { icon: <Home />, text: "Inicio", link: "/" },
-  { icon: <User />, text: "Sobre mí", link: "/about" },
-  { icon: <GalleryVerticalEnd />, text: "Proyectos", link: "/projects" },
-  { icon: <Download />, text: "Descargar Cv", link: "/contact" },
-];
+import useTranslation from "../custom/useTraslation/UseTraslation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isShrunk, setIsShrunk] = useState(false);
+  const t = useTranslation();
+
+  const menuItems = [
+    { icon: <Home />, text: t("navbar.home"), link: "/" },
+    { icon: <User />, text: t("nabar.user"), link: "/about" },
+    {
+      icon: <GalleryVerticalEnd />,
+      text: t("nabar.projects"),
+      link: "/projects",
+    },
+    { icon: <Download />, text: t("nabar.cv"), link: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,6 +59,9 @@ const Navbar = () => {
 
         {/* Menú horizontal desde 901px en adelante */}
         <div className="hidden [@media(min-width:901px)]:flex items-center gap-6">
+          <div className="hidden [@media(min-width:901px)]:flex items-center gap-6">
+            <LanguageSwitcher />
+          </div>
           {menuItems.map((item, index) => (
             <div key={index}>
               {item.text === "Descargar Cv" ? (

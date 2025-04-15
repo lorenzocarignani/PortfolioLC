@@ -3,10 +3,14 @@ import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
+import useTranslation from "../custom/useTraslation/UseTraslation";
+
 const Contact = () => {
   const formRef = useRef();
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const t = useTranslation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-negro text-white px-6 md:px-20 py-20 min-h-screen">
+    <section className="bg-negro text-white items-center px-6 md:px-20 py-20 min-h-screen">
       <motion.div
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
@@ -41,25 +45,27 @@ const Contact = () => {
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-4xl sm:text-5xl font-semibold text-center mb-10">
-          Contacto
+          {t("contact.title")}
         </h2>
         {submitted ? (
           <p className="text-center text-lg text-primary">
-            ¡Gracias por tu mensaje! Te responderé pronto.
+            {t("contact.greetings")}
           </p>
         ) : (
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="bg-gris p-8 rounded-[10px] shadow-md space-y-6"
+            className=" p-8 rounded-[10px] shadow-md space-y-6 border  border-mute"
           >
             <div>
-              <label className="block text-sm font-semibold mb-2">Nombre</label>
+              <label className="block text-sm font-semibold mb-2">
+                {t("contact.name")}
+              </label>
               <input
                 type="text"
                 name="name"
                 required
-                className="w-full p-3 rounded bg-black border border-primary text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full p-3 rounded bg-black border border-mute text-white focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
             <div>
@@ -68,30 +74,32 @@ const Contact = () => {
                 type="email"
                 name="email"
                 required
-                className="w-full p-3 rounded bg-black border border-primary text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full p-3 rounded bg-black border border-mute text-white focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
             <div>
               <label className="block text-sm font-semibold mb-2">
-                Mensaje
+                {t("contact.message")}
               </label>
               <textarea
                 name="message"
                 rows="5"
                 required
-                className="w-full p-3 rounded bg-black border border-primary text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                className="w-full p-3 rounded bg-black border border-mute text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"
               ></textarea>
             </div>
-            <motion.button
-              type="submit"
-              disabled={loading}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full bg-negro text-white justify-center px-6 py-3 rounded-[8px] font-semibold text-lg flex items-center gap-2 border border-primary transition-colors duration-300 hover:drop-shadow-red disabled:opacity-50"
-            >
-              {loading ? "Enviando..." : "Enviar mensaje"}
-              <Send className="text-primary" />
-            </motion.button>
+            <div className="flex justify-center">
+              <motion.button
+                type="submit"
+                disabled={loading}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-1/2 bg-negro text-white justify-center px-6 py-3 rounded-[5px] font-semibold text-lg flex items-center gap-2 border border-primary transition-colors duration-300 hover:drop-shadow-red disabled:opacity-50"
+              >
+                {loading ? "Enviando..." : "Enviar mensaje"}
+                <Send className="text-primary" />
+              </motion.button>
+            </div>
           </form>
         )}
       </motion.div>

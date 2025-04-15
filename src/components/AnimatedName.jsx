@@ -1,22 +1,24 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { memo } from "react";
 
 const typingSpeed = 0.05; // segundos por letra
 
-// Animación individual por letra (solo opacidad)
-const letterAnimation = {
-  hidden: { opacity: 0 },
-  visible: (i) => ({
-    opacity: 1,
-    transition: {
-      delay: i * typingSpeed,
-      duration: 0.05,
-    },
-  }),
-};
-
 const AnimatedName = ({ name }) => {
   const [showCursor, setShowCursor] = useState(false);
+
+  // ✅ Memoiza la animación para evitar recalcularla en cada render
+  const getLetterAnimation = useCallback(
+    (i) => ({
+      opacity: 1,
+      transition: {
+        delay: i * typingSpeed,
+        duration: 0.15,
+      },
+    }),
+    []
+  );
 
   useEffect(() => {
     const totalDelay = name.length * typingSpeed * 1000 + 500;
@@ -33,15 +35,13 @@ const AnimatedName = ({ name }) => {
         <motion.span
           key={index}
           custom={index}
-          variants={letterAnimation}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0 }}
+          animate={getLetterAnimation(index)}
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>
       ))}
 
-      {/* Cursor parpadeante */}
       <motion.span
         className="ml-1 text-primary"
         initial={{ opacity: 0 }}
@@ -57,4 +57,4 @@ const AnimatedName = ({ name }) => {
   );
 };
 
-export default AnimatedName;
+export default memo(AnimatedName);

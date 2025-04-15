@@ -3,6 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      safelist: ["text-primary", "bg-primary", "drop-shadow-red"],
+
       animation: {
         "border-charger": "border-charger 1.5s infinite",
       },
