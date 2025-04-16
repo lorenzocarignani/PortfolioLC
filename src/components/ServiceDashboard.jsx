@@ -1,6 +1,6 @@
 import ServiceCard from "./ServiceCard";
 import { Rocket } from "lucide-react";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 const ServiceDashboard = () => {
   const t = useTranslation();
   return (

@@ -10,7 +10,7 @@ import {
   DiMsqlServer,
 } from "react-icons/di";
 import { VscAzure } from "react-icons/vsc";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 
 const techLogos = [

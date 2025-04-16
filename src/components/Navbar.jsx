@@ -7,7 +7,7 @@ import DropdownIcons from "./DropdownIcons";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 import { User, GalleryVerticalEnd, Download, Home, Store } from "lucide-react";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,7 +1,7 @@
 import React from "react";
 import SocialIcons from "./SocialIcons";
 import Logo from "../assets/Pictures/Logo-Lc.png";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 const Footer = () => {
   const t = useTranslation();

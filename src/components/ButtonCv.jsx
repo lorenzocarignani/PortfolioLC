@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 const ButtonCv = () => {
   const t = useTranslation();

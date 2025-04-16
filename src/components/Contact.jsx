@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 const Contact = () => {
   const formRef = useRef();

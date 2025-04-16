@@ -2,7 +2,7 @@ import React from "react";
 import ButtonCv from "./ButtonCv";
 import { motion } from "framer-motion";
 import Logo from "../assets/Pictures/Logo-Lc.png";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 const AboutHero = () => {
   const t = useTranslation();

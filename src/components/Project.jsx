@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProjectFilter from "./ProjectFilter";
 import ProjectCards from "./ProjectCards";
 import { motion } from "framer-motion";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 const Projects = () => {
   const t = useTranslation();

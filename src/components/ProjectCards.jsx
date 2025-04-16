@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 import TaskMinder from "../assets/Pictures/TaskMinder.webp";
 

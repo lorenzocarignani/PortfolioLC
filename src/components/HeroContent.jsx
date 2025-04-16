@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import SocialIcons from "./SocialIcons";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 const HeroContent = () => {
   const t = useTranslation();

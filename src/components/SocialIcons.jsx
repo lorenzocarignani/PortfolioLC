@@ -1,6 +1,6 @@
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 
 const socialLinks = [
   {

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
-import useTranslation from "../custom/useTraslation/UseTraslation";
+import useTranslation from "../custom/useTraslation/useTraslation";
 import { FaWhatsapp } from "react-icons/fa";
 
 const ServiceCard = ({ title, items, message }) => {
