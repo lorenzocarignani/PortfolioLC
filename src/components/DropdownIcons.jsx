@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
-
+import useTranslation from "../custom/useTraslation/useTraslation";
 import AnimatedName from "./AnimatedName";
 
 const DropdownIcons = ({ isOpen, menuItems, setIsOpen }) => {
+  const t = useTranslation();
   return (
     <div>
       <AnimatePresence>
@@ -25,7 +26,7 @@ const DropdownIcons = ({ isOpen, menuItems, setIsOpen }) => {
                 exit={{ opacity: 0, x: -10 }}
                 transition={{ duration: 0.3, delay: 0.05 * index }}
               >
-                {item.text === "Descargar Cv" ? (
+                {item.text === t("nabar.cv") ? (
                   <a
                     href="/Lorenzo-Carignani-CV.pdf"
                     download="Lorenzo-Carignani-CV.pdf"

@@ -23,7 +23,10 @@ const Navbar = () => {
       text: t("nabar.projects"),
       link: "/projects",
     },
-    { icon: <Download />, text: t("nabar.cv"), link: "/contact" },
+    {
+      icon: <Download />,
+      text: t("nabar.cv"),
+    },
   ];
 
   useEffect(() => {
@@ -65,7 +68,7 @@ const Navbar = () => {
           </div>
           {menuItems.map((item, index) => (
             <div key={index}>
-              {item.text === "Descargar Cv" ? (
+              {item.text === t("nabar.cv") ? (
                 <a
                   href="/Lorenzo-Carignani-CV.pdf"
                   download="Lorenzo-Carignani-CV.pdf"
