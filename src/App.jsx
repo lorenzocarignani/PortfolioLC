@@ -5,6 +5,7 @@ import NotFound from "./routes/NotFound";
 import AboutMe from "./pages/AboutMe";
 import ScrollToTop from "./components/ScrollToTop";
 import React from "react";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<AboutMe />} />
         <Route path="*" element={<NotFound />} />

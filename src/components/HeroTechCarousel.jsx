@@ -3,14 +3,15 @@ import { motion } from "framer-motion";
 import {
   DiDotnet,
   DiReact,
-  DiSqllite,
   DiPython,
-  DiGithubBadge,
   DiMysql,
   DiDocker,
+  DiGit,
+  DiMsqlServer,
 } from "react-icons/di";
 import { VscAzure } from "react-icons/vsc";
 import useTranslation from "../custom/useTraslation/UseTraslation";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 
 const techLogos = [
   {
@@ -24,7 +25,7 @@ const techLogos = [
     key: "react",
   },
   {
-    icon: <DiSqllite className="text-[#CC2927] text-5xl" />,
+    icon: <DiMsqlServer className="text-[#CC2927] text-5xl" />,
     name: "SQL Server",
     key: "sql",
   },
@@ -39,19 +40,19 @@ const techLogos = [
     key: "python",
   },
   {
-    icon: <DiGithubBadge className="text-white text-5xl" />,
-    name: "GitHub",
-    key: "github",
-  },
-  {
-    icon: <DiMysql className="text-[#4479A1] text-5xl" />,
-    name: "MySQL",
-    key: "mysql",
+    icon: <DiGit className="text-[#f05033] text-5xl" />,
+    name: "Git",
+    key: "git",
   },
   {
     icon: <DiDocker className="text-[#2496ED] text-5xl" />,
     name: "Docker",
     key: "docker",
+  },
+  {
+    icon: <RiTailwindCssFill className="text-[#2496ED] text-5xl" />,
+    name: "Tailwind Css",
+    key: "tailwind",
   },
 ];
 

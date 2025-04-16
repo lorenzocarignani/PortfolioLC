@@ -1,18 +1,16 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Project from "../components/Project";
+import ServiceDashboard from "../components/ServiceDashboard";
 
-const Projects = () => {
+const Services = () => {
   return (
     <div>
       <Navbar />
-      <div className="mt-28">
-        <Project />
-      </div>
+      <ServiceDashboard />
       <Footer />
     </div>
   );
 };
 
-export default Projects;
+export default Services;

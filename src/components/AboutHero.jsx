@@ -1,9 +1,11 @@
 import React from "react";
 import ButtonCv from "./ButtonCv";
 import { motion } from "framer-motion";
-import Logo from "../assets/Pictures/Logo.png";
+import Logo from "../assets/Pictures/Logo-Lc.png";
+import useTranslation from "../custom/useTraslation/UseTraslation";
 
 const AboutHero = () => {
+  const t = useTranslation();
   return (
     <section className="px-6 md:px-20 py-20 text-white bg-negro mt-28">
       <motion.div
@@ -17,7 +19,7 @@ const AboutHero = () => {
           <img
             src={Logo}
             alt="Lorenzo Carignani"
-            className="w-72 h-72 md:w-96 md:h-96 object-scale-down border-primary drop-shadow-red"
+            className="w-72 h-72 md:w-96 md:h-96 p-8 rounded-full border-primary border-[5px] "
             loading="lazy"
           />
         </div>
@@ -27,7 +29,7 @@ const AboutHero = () => {
           {/* Título + animación */}
           <div className="text-center md:text-left">
             <h1 className="text-6xl md:text-5xl font-semibold text-white">
-              Sobre mí
+              {t("about.title")}
             </h1>
             <motion.div
               className="h-[3px] bg-primary rounded-full mt-2 mx-auto md:mx-0"
@@ -38,42 +40,23 @@ const AboutHero = () => {
           </div>
 
           <p className="text-lg leading-relaxed text-gray-200">
-            ¡Hola! Soy <strong className="text-white">Lorenzo Carignani</strong>
-            , desarrollador especializado en tecnologías como{" "}
+            {t("about.hi")}
             <strong className="text-white">
-              .NET, React, SQL Server y Azure
+              Lorenzo Carignani{" "}
+              <em className="border-b-[1px] border-primary">
+                {t("about.degree")}
+              </em>
             </strong>
-            . Mi camino en la programación comenzó con la curiosidad de entender
-            cómo funcionan las cosas por dentro, y desde entonces no paré de
-            aprender y crear.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-200">
-            Me formé como desarrollador en{" "}
-            <strong className="text-white">UTN</strong> y complementé mi
-            formación con cursos avanzados de{" "}
-            <strong className="text-white">
-              arquitectura de software, patrones de diseño
-            </strong>{" "}
-            y desarrollo web full stack. Además, cuento con certificaciones en{" "}
-            <strong className="text-white">
-              Desarrollo Web Full Stack, .NET Fundamentals y Azure DevOps
-            </strong>
-            .
+            {t("about.formation1")}
           </p>
-
           <p className="text-lg leading-relaxed text-gray-200">
-            Soy una persona orientada a los detalles, con fuerte capacidad de
-            análisis y resolución de problemas. Me entusiasma trabajar en
-            equipo, enfrentar nuevos desafíos y seguir creciendo como
-            profesional.
+            {t("about.formation2")}
           </p>
-
           <p className="text-lg leading-relaxed text-gray-200">
-            Mi objetivo es contribuir con soluciones escalables, limpias y bien
-            estructuradas, en proyectos que aporten valor. Si estás buscando a
-            alguien comprometido, con iniciativa y pasión por el desarrollo, ¡no
-            dudes en contactarme!
+            {t("about.formation3")}
           </p>
 
           {/* Botón centrado */}

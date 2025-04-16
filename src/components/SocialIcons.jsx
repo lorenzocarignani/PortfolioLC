@@ -24,7 +24,7 @@ const SocialIcons = () => {
   const t = useTranslation();
   return (
     <div className="flex items-center gap-4 ">
-      <label>{t("social.title")}</label>
+      <p htmlFor="title">{t("social.title")}</p>
       {socialLinks.map((link, index) => (
         <a
           key={index}

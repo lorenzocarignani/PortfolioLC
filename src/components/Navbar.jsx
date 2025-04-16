@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown";
 import DropdownIcons from "./DropdownIcons";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-import { User, GalleryVerticalEnd, Download, Home } from "lucide-react";
+import { User, GalleryVerticalEnd, Download, Home, Store } from "lucide-react";
 import useTranslation from "../custom/useTraslation/UseTraslation";
 
 const Navbar = () => {
@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const menuItems = [
     { icon: <Home />, text: t("navbar.home"), link: "/" },
+    { icon: <Store />, text: t("nabar.services"), link: "/services" },
     { icon: <User />, text: t("nabar.user"), link: "/about" },
     {
       icon: <GalleryVerticalEnd />,

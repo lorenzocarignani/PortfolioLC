@@ -48,7 +48,7 @@ const ProjectCards = ({ selectedCategory }) => {
   ];
 
   const filteredProjects =
-    selectedCategory === "Todo"
+    selectedCategory === "Todos" || selectedCategory === "All"
       ? projects
       : projects.filter((project) =>
           project.category.includes(selectedCategory)

@@ -55,35 +55,51 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className=" p-8 rounded-[10px] shadow-md space-y-6 border  border-mute"
+            className="p-8 rounded-[10px] shadow-md space-y-6 border border-mute"
           >
             <div>
-              <label className="block text-sm font-semibold mb-2">
+              <label
+                htmlFor="username"
+                className="block text-sm font-semibold mb-2"
+              >
                 {t("contact.name")}
               </label>
               <input
                 type="text"
                 name="name"
+                id="username"
+                autoComplete="on"
                 required
                 className="w-full p-3 rounded bg-black border border-mute text-white focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold mb-2">Email</label>
+              <label
+                htmlFor="email-user"
+                className="block text-sm font-semibold mb-2"
+              >
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
+                id="email-user"
+                autoComplete="on"
                 required
                 className="w-full p-3 rounded bg-black border border-mute text-white focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold mb-2">
+              <label
+                htmlFor="user-message"
+                className="block text-sm font-semibold mb-2"
+              >
                 {t("contact.message")}
               </label>
               <textarea
                 name="message"
                 rows="5"
+                id="user-message"
                 required
                 className="w-full p-3 rounded bg-black border border-mute text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"
               ></textarea>
@@ -96,7 +112,7 @@ const Contact = () => {
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-1/2 bg-negro text-white justify-center px-6 py-3 rounded-[5px] font-semibold text-lg flex items-center gap-2 border border-primary transition-colors duration-300 hover:drop-shadow-red disabled:opacity-50"
               >
-                {loading ? "Enviando..." : "Enviar mensaje"}
+                {loading ? t("contact.sending") : t("contact.send")}
                 <Send className="text-primary" />
               </motion.button>
             </div>

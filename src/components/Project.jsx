@@ -4,12 +4,12 @@ import ProjectCards from "./ProjectCards";
 import { motion } from "framer-motion";
 import useTranslation from "../custom/useTraslation/UseTraslation";
 
-const categories = ["Todo", "Frontend", "Backend", "Fullstack"];
-
 const Projects = () => {
   const t = useTranslation();
 
-  const [selectedCategory, setSelectedCategory] = useState("Todo");
+  const categories = [t("project.filter"), "Frontend", "Backend", "Fullstack"];
+
+  const [selectedCategory, setSelectedCategory] = useState(t("project.filter"));
 
   return (
     <motion.section

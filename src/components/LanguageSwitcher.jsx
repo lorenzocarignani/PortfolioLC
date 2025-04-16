@@ -4,22 +4,24 @@ import { TranslateContext } from "../services/traslationContext/traslation.conte
 const LanguageSwitcher = () => {
   const { language, changeLanguageHandler } = useContext(TranslateContext);
 
+  const buttonClasses = (lang) =>
+    `px-3 py-1 rounded-full transition-all duration-300  ${
+      language === lang
+        ? "bg-primary text-negro font-bold shadow-sm"
+        : "text-white hover:text-primary hover:bg-white/10"
+    }`;
+
   return (
-    <div className="flex gap-2 text-sm font-semibold text-white">
+    <div className="flex gap-2 items-center text-base mr-8">
       <button
         onClick={() => changeLanguageHandler("es")}
-        className={`hover:text-primary transition ${
-          language === "es" ? "text-primary underline" : ""
-        }`}
+        className={buttonClasses("es")}
       >
         ES
       </button>
-      <span>/</span>
       <button
         onClick={() => changeLanguageHandler("en")}
-        className={`hover:text-primary transition ${
-          language === "en" ? "text-primary underline" : ""
-        }`}
+        className={buttonClasses("en")}
       >
         EN
       </button>

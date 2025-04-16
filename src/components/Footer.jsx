@@ -1,8 +1,10 @@
 import React from "react";
 import SocialIcons from "./SocialIcons";
 import Logo from "../assets/Pictures/Logo-Lc.png";
+import useTranslation from "../custom/useTraslation/UseTraslation";
 
 const Footer = () => {
+  const t = useTranslation();
   return (
     <footer className="  shadow bg-gris p-4 md:p-8">
       <div className="w-full max-w-screen-xl mx-auto flex flex-col items-center">
@@ -17,7 +19,7 @@ const Footer = () => {
           {/* Redes sociales en desktop */}
           <SocialIcons />
           <span className="block text-sm md:mt-4 text-mute">
-            Desarrollado por Lorenzo Carignani
+            {t("footer.developer")}
           </span>
         </div>
       </div>
