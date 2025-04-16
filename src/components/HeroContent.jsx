@@ -26,9 +26,9 @@ const HeroContent = () => {
         <p>
           <span className="text-white font-semibold">{t("hero.subtitle")}</span>{" "}
           {t("hero.in")}{" "}
-          <span className="text-primary font-semibold">.NET</span>{" "}
-          {t("hero.and")}{" "}
-          <span className="text-primary font-semibold">React</span>
+          <strong className="text-primary font-semibold">
+            .NET {t("hero.and")} React
+          </strong>
         </p>
 
         {/* Línea animada */}

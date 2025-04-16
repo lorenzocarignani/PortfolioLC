@@ -88,6 +88,62 @@ export const dictionary_translations = {
 
     //Footer
     { key: "footer.developer", value: "Developed by Lorenzo Carignani" },
+
+    //Services
+    { key: "services.title", value: "Do you need a website?" },
+    {
+      key: "services.subtitle",
+      value: "Boost your online presence with tailored professional solutions.",
+    },
+    {
+      key: "services.subtitle2",
+      value: "Transform your idea into a high-impact web!",
+    },
+    { key: "services.button", value: "Let's talk!" },
+    { key: "services.landing.title", value: "Professional Landing Page" },
+    {
+      key: "services.landing.items1",
+      value: "Modern and responsive design",
+    },
+    { key: "services.landing.items2", value: "Functional contact form" },
+    { key: "services.landing.items3", value: "Basic SEO optimization" },
+    {
+      key: "services.landing.items4",
+      value: "Fast loading and good performance",
+    },
+    { key: "services.complex.title", value: "Complex Website" },
+    {
+      key: "services.complex.items",
+      value: "Multiple sections (Home, About Me, Services, Contact)",
+    },
+    {
+      key: "services.complex.items1",
+      value: "Advanced interactivity with React",
+    },
+    {
+      key: "services.complex.items2",
+      value: "Database or CMS integration",
+    },
+    { key: "services.complex.items3", value: "Advanced SEO optimization" },
+    {
+      key: "services.complex.items4",
+      value: "Adaptable for e-commerce or blog",
+    },
+
+    { key: "services.complex.items5", value: "Responsive design" },
+
+    { key: "services.button", value: "Let's talk!" },
+
+    {
+      key: "services.message",
+      value:
+        "Hello Lorenzo, I'm interested in the Landing Page service. Could you tell me more?",
+    },
+    {
+      key: "services.message2",
+      value:
+        "Hello Lorenzo, I need a more complex website with several sections. Can you help me with that?",
+    },
   ],
   es: [
     //Navbar
@@ -98,7 +154,7 @@ export const dictionary_translations = {
     { key: "nabar.services", value: "Servicios" },
 
     //Hero Content
-    { key: "hero.title", value: "¡Bienvenido a mi portfolio!" },
+    { key: "hero.title", value: "¡Bienvenido a mi portafolio!" },
     { key: "hero.subtitle", value: "Desarrollador Full Stack" },
     { key: "hero.in", value: "en" },
     { key: "hero.and", value: "y" },
@@ -180,6 +236,65 @@ export const dictionary_translations = {
     { key: "footer.developer", value: "Desarrollado por Lorenzo Carignani" },
 
     //Services
-    {},
+    { key: "services.title", value: "¿Necesitás una página web?" },
+    {
+      key: "services.subtitle",
+      value:
+        "Impulsá tu presencia online con soluciones profesionales a medida.",
+    },
+    {
+      key: "services.subtitle2",
+      value: "¡Transformá tu idea en una web de alto impacto!",
+    },
+
+    { key: "services.button", value: "¡Hablemos!" },
+    { key: "services.landing.title", value: "Landing Page Profesional" },
+    {
+      key: "services.landing.items",
+      value: "Diseño moderno y responsive",
+    },
+    {
+      key: "services.landing.items1",
+      value: "Formulario de contacto funcional",
+    },
+
+    { key: "services.landing.items2", value: "Optimización SEO básica" },
+    {
+      key: "services.landing.items3",
+      value: "Carga rápida y buen rendimiento",
+    },
+    { key: "services.landing.items4", value: "Integración con redes sociales" },
+    { key: "services.complex.title", value: "Sitio Web Complejo" },
+    {
+      key: "services.complex.items",
+      value: "Múltiples secciones (Inicio, Sobre mí, Servicios, Contacto)",
+    },
+    {
+      key: "services.complex.items1",
+      value: "Interactividad avanzada con React",
+    },
+    {
+      key: "services.complex.items2",
+      value: "Integración de base de datos o CMS",
+    },
+    { key: "services.complex.items3", value: "Optimización SEO avanzada" },
+    {
+      key: "services.complex.items4",
+      value: "Adaptable para e-commerce o blog",
+    },
+    { key: "services.complex.items5", value: "Diseño responsive" },
+
+    { key: "services.button", value: "¡Hablemos!" },
+
+    {
+      key: "services.message",
+      value:
+        "Hola Lorenzo, estoy interesado en el servicio de Landing Page. ¿Podrías contarme más?.",
+    },
+    {
+      key: "services.message2",
+      value:
+        "Hola Lorenzo, necesito una web más compleja con varias secciones. ¿Podés ayudarme con eso?",
+    },
   ],
 };

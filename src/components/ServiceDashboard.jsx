@@ -1,45 +1,42 @@
 import ServiceCard from "./ServiceCard";
 import { Rocket } from "lucide-react";
-
+import useTranslation from "../custom/useTraslation/UseTraslation";
 const ServiceDashboard = () => {
+  const t = useTranslation();
   return (
     <section className="mt-28 px-6 py-16 bg-negro text-white">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-6xl font-bold mb-4 text-white">
-          ¿Necesitás una página web?
+          {t("services.title")}
         </h1>
-        <p className="text-lg mb-10 text-mute">
-          Impulsá tu presencia online con soluciones profesionales a medida.
-        </p>
+        <p className="text-lg mb-10 text-mute">{t("services.subtitle")}</p>
         <div className="flex justify-center items-center gap-4 mb-12">
           <Rocket className=" text-primary w-6 h-6" />
-          <p className="text-sm">
-            Transformá tu idea en una web de alto impacto
-          </p>
+          <p className="text-sm">{t("services.subtitle2")}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           <ServiceCard
-            title="Landing Page Profesional"
+            title={t("services.landing.title")}
             items={[
-              "Diseño moderno y responsive",
-              "Formulario de contacto funcional",
-              "Optimización SEO básica",
-              "Carga rápida y buen rendimiento",
+              t("services.landing.items1"),
+              t("services.landing.items2"),
+              t("services.landing.items3"),
+              t("services.landing.items4"),
             ]}
-            link="https://wa.me/tu-numero"
+            message={t("services.message")}
           />
 
           <ServiceCard
-            title="Sitio Web Complejo"
+            title={t("services.complex.title")}
             items={[
-              "Múltiples secciones (Inicio, Sobre mí, Servicios, Contacto)",
-              "Interactividad avanzada con React",
-              "Integración de base de datos o CMS",
-              "Optimización SEO avanzada",
-              "Adaptable para e-commerce o blog",
+              t("services.complex.items1"),
+              t("services.complex.items2"),
+              t("services.complex.items3"),
+              t("services.complex.items4"),
+              t("services.complex.items5"),
             ]}
-            link="https://wa.me/tu-numero"
+            message={t("services.message2")}
           />
         </div>
       </div>
